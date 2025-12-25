@@ -71,3 +71,17 @@ body {
 .toc li:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 1300px) {
+  #book-container {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 900px) {
+  #book-container {
+    transform: scale(0.65);
+  }
+}
+
