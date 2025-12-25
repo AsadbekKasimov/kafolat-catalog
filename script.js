@@ -4,8 +4,8 @@ const sound = document.getElementById("flipSound");
 const pageFlip = new St.PageFlip(container, {
   width: 1200,
   height: 1200,
-  size: "stretch",
-  showCover: true,          // 🔴 ВАЖНО
+  size: "fixed",
+  showCover: true,         
   maxShadowOpacity: 0.5,
   mobileScrollSupport: true
 });
@@ -31,7 +31,7 @@ document.getElementById("nextBtn").onclick = () => pageFlip.flipNext();
 // fullscreen
 document.getElementById("fsBtn").onclick = () => {
   if (!document.fullscreenElement) {
-    container.requestFullscreen();
+    container.requestFullscreen({ navigationUI: "hide" });
   } else {
     document.exitFullscreen();
   }
