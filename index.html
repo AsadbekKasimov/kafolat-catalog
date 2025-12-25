@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>KAFOLAT Web Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Панель управления -->
+<div class="controls">
+  <button id="prevBtn">←</button>
+  <button id="nextBtn">→</button>
+  <button id="tocBtn">☰</button>
+  <button id="fsBtn">⛶</button>
+</div>
+
+<!-- Оглавление -->
+<div id="toc" class="toc hidden">
+  <h3>Оглавление</h3>
+  <ul>
+    <li data-page="0">Обложка</li>
+    <li data-page="2">Триггеры</li>
+    <li data-page="10">Флаконы</li>
+    <li data-page="20">ПЭТ тара</li>
+    <li data-page="40">Аксессуары</li>
+  </ul>
+</div>
+
+<div class="wrapper">
+  <div id="book-container"></div>
+</div>
+
+<audio id="flipSound" src="sound.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
