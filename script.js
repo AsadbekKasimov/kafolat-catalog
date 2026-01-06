@@ -25,11 +25,14 @@ for (let i = 1; i <= totalPages; i++) {
 pageFlip.loadFromImages(pages);
 
 /* Звук перелистывания + индикатор */
-pageFlip.on("flip", () => {
-  flipSound.currentTime = 0;
-  flipSound.play().catch(() => {});
-  updateIndicator();
+pageFlip.on("changeState", (e) => {
+  if (e.data === "flipping") {
+    flipSound.currentTime = 0;
+    flipSound.play().catch(() => {});
+    updateIndicator();
+  }
 });
+
 
 /* Индикатор страниц */
 function updateIndicator() {
