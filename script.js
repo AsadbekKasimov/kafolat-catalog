@@ -42,8 +42,6 @@ function clickFx() {
   clickSound.currentTime = 0;
   clickSound.play().catch(() => {});
 }
-
-/* Кнопки */
 document.getElementById("prevBtn").onclick = () => {
   clickFx();
   pageFlip.flipPrev();
@@ -53,6 +51,8 @@ document.getElementById("nextBtn").onclick = () => {
   clickFx();
   pageFlip.flipNext();
 };
+
+
 
 /* Fullscreen */
 document.getElementById("fsBtn").onclick = () => {
